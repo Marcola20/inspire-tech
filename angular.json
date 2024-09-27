@@ -23,8 +23,10 @@
             "assets": [
               {
                 "glob": "**/*",
-                "input": "public"
-              }
+                "input": "src/assets",
+                "output": "/assets"
+              },
+              "src/favicon.ico"
             ],
             "styles": [
               "src/styles.css"
@@ -86,8 +88,10 @@
             "assets": [
               {
                 "glob": "**/*",
-                "input": "public"
-              }
+                "input": "src/assets",
+                "output": "/assets"
+              },
+              "src/favicon.ico"
             ],
             "styles": [
               "src/styles.css"
@@ -97,5 +101,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "c161dfa5-acec-4f11-b1ed-a9d2fcb4734c"
   }
 }

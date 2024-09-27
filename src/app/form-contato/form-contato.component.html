@@ -1,0 +1,62 @@
+<div class="contact-page">
+  <h1 class="contact-title">Contato</h1>
+  <p class="contact-subtitle">Fale conosco para discutir suas necessidades e solicitar um orçamento personalizado.</p>
+
+  <div class="contact-container">
+    <div class="contact-info">
+      <h2>Informações</h2>
+      <p>Prencha o formulário e um de nossos especialistas entrará em contato para entender seu projeto e oferecer a melhor solução para você!</p>
+      <ul>
+        <li><i class="fa fa-phone icon-branco"></i> +55 41 9 9264-0130</li>
+        <li><i class="fa fa-envelope icon-branco"></i> comercial&#64;inspiretech.com</li>
+        <li><i class="fa fa-map-marker icon-branco"></i>  R. Leonardo Francischelli, 324 - 2º Andar, Sala 01 -<br> Jardim Paulista, Campina Grande do Sul - PR,<br> CEP: 83430-000</li>
+      </ul>
+    </div>
+
+    <div class="contact-form">
+      <form>
+        <div class="form-group-row">
+          <div class="form-group">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" placeholder="Insira o seu nome" required>
+          </div>
+      
+          <div class="form-group">
+            <label for="empresa">Empresa:</label>
+            <input type="text" id="empresa" name="empresa" placeholder="Insira o nome sua empresa">
+          </div>
+        </div>
+      
+        <div class="form-group-row">
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Insira o seu email" required>
+          </div>
+      
+          <div class="form-group">
+            <label for="telefone">Telefone/Celular:</label>
+            <input type="tel" id="telefone" name="telefone" placeholder="(__) _____-____" (input)="formatPhone($event)" required>
+          </div>
+        </div>
+      
+        <div class="form-group form-group-full">
+          <label for="servico">Serviço(s) desejado(s):</label>
+          <div class="checkbox-group">
+            <label for="estrategia-digital"><input type="checkbox" id="estrategia-digital" class="custom-checkbox">Estratégia Digital</label>
+            <label for="identidade-visual"><input type="checkbox" id="identidade-visual" class="custom-checkbox">Identidade Visual</label>
+            <label for="branding"><input type="checkbox" id="branding" class="custom-checkbox">Branding</label>
+            <label for="site"><input type="checkbox" id="site" class="custom-checkbox">Site</label>
+            <label for="midias-sociais"><input type="checkbox" id="midias-sociais" class="custom-checkbox">Mídias Sociais</label>
+            <label for="gestao-trafego"><input type="checkbox" id="gestao-trafego" class="custom-checkbox">Gestão de Tráfego</label>
+          </div>
+        </div>
+      
+        <div class="form-group form-group-full">
+          <label for="mensagem">Mensagem:</label>
+          <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem..."></textarea>
+        </div>
+      
+        <button type="submit" class="submit-btn">Fazer Orçamento</button>
+      </form>
+    </div>
+</div>

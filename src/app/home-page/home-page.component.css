@@ -176,7 +176,7 @@ body {
 }
 
 .line {
-    width: 50px; 
+    width: 80px; 
     height: 3px;
     background-color: #A020F0; 
 }
@@ -297,4 +297,147 @@ body {
     .service-box p {
         font-size: 14px; 
     }
+}
+
+/* Seção Cases */
+.cases-section {
+    padding: 80px 20px;
+    background-color: #222222;
+    color: white;
+    text-align: left;
+}
+
+.cases-header {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    margin-left: 7%; 
+}
+
+.title-line-wrapper {
+    display: flex;
+    align-items: center; 
+    gap: 15px; 
+    margin-bottom: 10px; 
+}
+
+.line {
+    width: 50px; 
+    height: 3px;
+    background-color: #A020F0;
+}
+
+.section-title {
+    font-size: 36px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.section-subtitle {
+    color: #A020F0;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px; 
+}
+  
+.cases-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); 
+    gap: 20px;
+    justify-items: center;
+    align-items: center; 
+}
+
+.case-box {
+    width: 100%;
+    aspect-ratio: 1; 
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.case-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    object-fit: cover; 
+}
+
+.case-box:hover {
+    transform: scale(1.10);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.case-title {
+    position: absolute;
+    bottom: 10px; 
+    left: 0;
+    right: 0;
+    padding: 10px;
+    background: rgba(160, 32, 240, 0.7); 
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    opacity: 0;
+    transform: translateY(10px); 
+    transition: opacity 0.3s, transform 0.3s; 
+}
+
+.case-box:hover .case-title {
+    opacity: 1; 
+    transform: translateY(0); 
+}
+  
+/* Tablets */
+@media (max-width: 1024px) {
+.cases-header {
+    margin-left: 5%;
+}
+
+.section-title {
+    font-size: 32px;
+}
+
+.section-subtitle {
+    font-size: 16px;
+}
+
+.cases-container {
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 15px;
+}
+
+.case-box {
+    width: 100%;
+    aspect-ratio: 1;
+}
+}
+
+/* Celulares */
+@media (max-width: 768px) {
+.cases-header {
+    margin-left: 3%;
+}
+
+.section-title {
+    font-size: 28px;
+}
+
+.section-subtitle {
+    font-size: 14px;
+}
+
+.cases-container {
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 10px;
+}
+
+.case-box {
+    width: 100%;
+    aspect-ratio: 1;
+}
 }

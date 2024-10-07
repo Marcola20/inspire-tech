@@ -22,6 +22,10 @@ export class NavbarComponent {
 
   constructor(private router: Router) {}
 
+  navigateToHomePage() {
+    this.router.navigate(['/home-page']);
+  }
+
   navigateToFormContato() {
     this.router.navigate(['/form-contato']);
   }

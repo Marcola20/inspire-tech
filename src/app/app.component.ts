@@ -7,7 +7,7 @@ import { RouterOutlet } from '@angular/router';
   selector: 'app-root',
   standalone: true,
   imports: [
-    RouterOutlet,  // Adiciona a saída para o roteamento
+    RouterOutlet,  
     NavbarComponent,
     FooterComponent
   ],

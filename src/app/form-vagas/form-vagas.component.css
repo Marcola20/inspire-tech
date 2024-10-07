@@ -1,0 +1,232 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .contact-page {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  
+  .contact-title {
+    font-size: 36px;
+    color: #A020F0;
+    margin-top: 20px;
+  }
+  
+  .contact-subtitle {
+    font-size: 18px;
+    color: #ddd;
+    margin-bottom: 40px;
+  }
+  
+  .contact-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #1c1c1c;
+    color: white;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 1200px;
+    gap: 30px;
+    font-family: 'Poppins', sans-serif;
+    text-align: left;
+  }
+  
+  .contact-info {
+    width: 40%;
+    padding: 30px;
+    background-color: #A020F0;
+    border-radius: 10px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .contact-info h2 {
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  .contact-info p, .contact-info ul {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  .contact-info p {
+    color: #C6BACD;
+    font-size: 16px;
+  }
+  
+  .contact-info ul {
+    list-style: none;
+    padding: 0;
+    font-size: 14px;
+  }
+  
+  .contact-info ul li {
+    margin-bottom: 15px;
+  }
+  
+  .contact-form {
+    width: 55%;
+    padding: 30px;
+    background-color: #2c2c2c;
+    border-radius: 10px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .contact-form h2 {
+    color: #A020F0;
+    font-size: 26px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 16px;
+    color: #d3d3d3;
+  }
+  
+  input, textarea, select {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+  }
+  
+  input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: #A020F0;
+  }
+  
+  /* Organizando as colunas */
+  .form-group-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .form-group-row .form-group {
+    flex: 1;
+  }
+  
+  .form-group-full {
+    width: 100%;
+  }
+  
+  .submit-btn {
+    background-color: #A020F0;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  .submit-btn:hover {
+    background-color: #af3bf7;
+  }
+  
+  .checkbox-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 10px 20px; 
+  }
+  
+  .checkbox-group label {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: #d3d3d3;
+    gap: -5px; 
+  }
+  
+  .checkbox-group input[type="checkbox"] {
+    margin-right: 5px; 
+    margin-right: 10px;
+    width: 12px;
+    height: 12px;
+    transform: scale(0.6); 
+    border-radius: 50%;
+    appearance: none;
+    background-color: #444;
+    cursor: pointer;
+    position: relative;
+    border: 1px solid #A020F0;
+  }
+  
+  .checkbox-group input[type="checkbox"]:checked {
+    background-color: #A020F0;
+    border-color: #A020F0;
+  }
+  
+  .checkbox-group input[type="checkbox"]::after {
+    content: '\f00c';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    color: #444;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .contact-container {
+      flex-direction: column;
+      padding: 20px;
+    }
+  
+    .form-group-row {
+      flex-direction: column;
+    }
+  
+    .form-group-row .form-group {
+      width: 100%;
+    }
+  
+    .contact-info, .contact-form {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  
+    .submit-btn {
+      padding: 15px;
+    }
+  
+    .checkbox-group {
+      grid-template-columns: 1fr; 
+    }
+  }
+  
+  .status-message {
+    margin-top: 15px;
+    font-size: 16px;
+  }
+  
+  .success-message {
+    color: #00ff00; /* Verde para sucesso */
+  }
+  
+  .error-message {
+    color: #ff0000; /* Vermelho para erro */
+  }

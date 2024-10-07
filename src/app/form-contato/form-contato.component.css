@@ -217,3 +217,16 @@ input:focus, textarea:focus, select:focus {
     grid-template-columns: 1fr; 
   }
 }
+
+.status-message {
+  margin-top: 15px;
+  font-size: 16px;
+}
+
+.success-message {
+  color: #00ff00; /* Verde para sucesso */
+}
+
+.error-message {
+  color: #ff0000; /* Vermelho para erro */
+}

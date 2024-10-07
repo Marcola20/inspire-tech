@@ -1,5 +1,5 @@
 .footer {
-    background-color: #000;
+    background-color: #101017;
     color: white;
     padding: 20px 40px;
     display: flex;
@@ -40,6 +40,7 @@
   .footer-section a {
     color: #fff;
     text-decoration: none;
+    cursor: pointer; 
   }
   
   .footer-logo {

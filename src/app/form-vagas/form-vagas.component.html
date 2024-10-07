@@ -1,0 +1,76 @@
+<div class="contact-page">
+    <div class="contact-container">
+      <div class="contact-info">
+        <h2>Trabalhe Conosco</h2>
+        <p>Preencha o formulário e envie seu currículo para candidatar-se às nossas vagas. Estamos em busca de talentos como você!</p>
+        <ul>
+          <li><i class="fa fa-phone icon-branco"></i> +55 41 9 9264-0130</li>
+          <li><i class="fa fa-envelope icon-branco"></i> rh&#64;inspiretech.com</li>
+          <li><i class="fa fa-map-marker icon-branco"></i>  R. Leonardo Francischelli, 324 - 2º Andar, Sala 01 -<br> Jardim Paulista, Campina Grande do Sul - PR,<br> CEP: 83430-000</li>
+        </ul>
+      </div>
+  
+      <div class="contact-form">
+        <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+          <div class="form-group-row">
+            <div class="form-group">
+              <label for="nome">Nome:</label>
+              <input type="text" id="nome" name="nome" [(ngModel)]="formData.nome" placeholder="Insira o seu nome" required>
+            </div>
+        
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" [(ngModel)]="formData.email" placeholder="Insira o seu email" required>
+              </div>
+          </div>
+        
+          <div class="form-group-row">
+            <div class="form-group">
+              <label for="curriculo">Currículo:</label>
+              <input type="file" id="curriculo" name="curriculo" (change)="onFileSelected($event)" #fileInput>
+            </div>
+        
+            <div class="form-group">
+              <label for="telefone">Telefone/Celular:</label>
+              <input type="tel" id="telefone" name="telefone" [(ngModel)]="formData.telefone" placeholder="(__) _____-____" (input)="formatPhone($event)" required>
+            </div>
+          </div>
+        
+          <div class="form-group form-group-full">
+            <label for="vaga">Vaga(s) desejada(s):</label>
+            <div class="checkbox-group">
+              <label for="social-media">
+                <input type="checkbox" id="social-media" (change)="updateSelectedVagas('Social Media', $event)"> Social Media
+              </label>
+              <label for="gestor-trafego">
+                <input type="checkbox" id="gestor-trafego" (change)="updateSelectedVagas('Gestor de Tráfego', $event)"> Gestor de Tráfego
+              </label>
+              <label for="designer">
+                <input type="checkbox" id="designer" (change)="updateSelectedVagas('Designer', $event)"> Designer
+              </label>
+              <label for="fotografo">
+                <input type="checkbox" id="fotografo" (change)="updateSelectedVagas('Fotógrafo', $event)"> Fotógrafo
+              </label>
+              <label for="filmmaker">
+                <input type="checkbox" id="filmmaker" (change)="updateSelectedVagas('Filmmaker', $event)"> Filmmaker
+              </label>
+              <label for="videomaker">
+                <input type="checkbox" id="videomaker" (change)="updateSelectedVagas('Videomaker', $event)"> Videomaker
+              </label>
+              <label for="desenvolvedor">
+                <input type="checkbox" id="desenvolvedor" (change)="updateSelectedVagas('Desenvolvedor', $event)"> Desenvolvedor
+              </label>
+              <label for="uxui">
+                <input type="checkbox" id="uxui" (change)="updateSelectedVagas('UX/UI Designer', $event)"> UX/UI Designer
+              </label>
+            </div>
+          </div>
+        
+          <button type="submit" class="submit-btn">Enviar Currículo</button>
+           
+        </form>
+  
+        <p *ngIf="statusMessage" [ngClass]="isError ? 'error-message' : 'success-message'" class="status-message">{{ statusMessage }}</p>
+      </div>
+  </div>
+  

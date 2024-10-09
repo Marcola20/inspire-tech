@@ -3,13 +3,24 @@
     <a (click)="navigateToHomePage()" class="navbar-logo">
       <img src="../../assets/Inspire.png" alt="Inspire Logo" class="logo">
     </a>
-    <!-- Botão para dispositivos móveis -->
     <span class="menu-toggle" (click)="toggleMenu()">&#9776;</span>
     <ul class="navbar-menu" [class.active]="isMenuOpen">
-      <li><a (click)="navigateToHomePage()" class="navbar-link">Home</a></li>
-      <li><a routerLink="/servicos" class="navbar-link">Serviços</a></li>
-      <li><a routerLink="/cases" class="navbar-link">Cases</a></li>
-      <li><a (click)="navigateToFormContato()" class="navbar-link">Contato</a></li>
+      <li>
+        <a 
+          [class.active]="isActive('/home-page')" 
+          (click)="navigateToHomePage()" 
+          class="navbar-link">
+          Home
+        </a>
+      </li>
+      <li>
+        <a 
+          [class.active]="isActive('/form-contato')" 
+          (click)="navigateToFormContato()" 
+          class="navbar-link">
+          Orçamento
+        </a>
+      </li>
     </ul>
   </div>
 </nav>

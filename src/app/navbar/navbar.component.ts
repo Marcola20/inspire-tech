@@ -1,26 +1,31 @@
-import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { Router, NavigationEnd } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-navbar',
-  standalone: true,  
-  imports: [
-    CommonModule
-  ],  
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
-export class NavbarComponent {
+export class NavbarComponent implements OnInit {
   isMenuOpen = false;
+  currentRoute: string = '';
+
+  constructor(private router: Router) {}
+
+  ngOnInit(): void {
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        this.currentRoute = event.urlAfterRedirects;
+      }
+    });
+  }
 
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
-    const navbar = document.querySelector('.navbar');
-    navbar?.classList.toggle('active', this.isMenuOpen);
   }
-
-  constructor(private router: Router) {}
 
   navigateToHomePage() {
     this.router.navigate(['/home-page']);
@@ -28,5 +33,9 @@ export class NavbarComponent {
 
   navigateToFormContato() {
     this.router.navigate(['/form-contato']);
+  }
+
+  isActive(route: string): boolean {
+    return this.currentRoute === route;
   }
 }
